@@ -5,19 +5,24 @@ import sass from "../assets/logos/sass.png";
 import react from "../assets/logos/react.png";
 import redux from "../assets/logos/redux.png";
 import tailwind from "../assets/logos/tailwind.png";
-import vscode from "../assets/logos/vscode.png";
-import git from "../assets/logos/git.png";
-import figma from "../assets/logos/figma.png";
 import swagger from "../assets/logos/swagger.png";
 import node from "../assets/logos/node.png";
 import mongo from "../assets/logos/mongoDB.png";
-import npm from "../assets/logos/npm.png";
-import vite from "../assets/logos/Vitejs.png";
 import jest from "../assets/logos/jest.png";
+import javascript from "../assets/logos/js.png";
+import ohmmyfood from "../assets/images/ohmyfood.webp";
+import sophie from "../assets/images/sophie-bluel.webp";
+import geodata from "../assets/images/geo-data.webp";
+import kasa from "../assets/images/kasa.webp";
+import events from "../assets/images/77events.webp";
+import nina from "../assets/images/nina-carduci.webp";
+import plats from "../assets/images/les-petits-plats.webp";
+import ecommerce from "../assets/images/e-commerce.webp";
+import argent from "../assets/images/argent-bank.webp";
 
 const Data = [
   {
-    image: space,
+    image: ohmmyfood,
     title: "Ohmyfood",
     link: "https://boby-front.github.io/Ohmyfood/",
     github: "https://github.com/boby-front/Ohmyfood.git",
@@ -28,17 +33,17 @@ const Data = [
     logo: [html, sass],
   },
   {
-    image: vaisseau,
+    image: sophie,
     title: "Sophie-Bluel",
     github: "https://github.com/boby-front/sophie-bluel.git",
     description:
       "Création d'un site d'architecte avec une gestion d'administrateur en JavaScript. Ce projet offre à l'architecte la possibilité d'ajouter et de supprimer ses travaux via une API, facilitée par l'utilisation de Swagger. De plus, le site est optimisé dynamiquement pour garantir une expérience utilisateur fluide.",
     pointFort:
       " • Site web professionnel pour un architecte avec une interface esthétique\n • Gestion d'administrateur permettant à l'architecte d'ajouter et de supprimer des travaux\n • Utilisation de JavaScript pour la logique côté client et les interactions dynamiques\n • Intégration d'une API et utilisation de Swagger pour faciliter la gestion des travaux\n • Optimisation dynamique pour une performance améliorée du site",
-    logo: [html, css, js, node],
+    logo: [html, css, js, node, swagger],
   },
   {
-    image: fusée,
+    image: nina,
     title: "Nina-Carducci",
     link: "https://boby-front.github.io/Nina-Carducci/",
     github: "https://github.com/boby-front/Nina-Carducci.git",
@@ -49,7 +54,7 @@ const Data = [
     logo: [html, css, js],
   },
   {
-    image: image,
+    image: kasa,
     title: "KASA",
     link: "https://projet-kasa.netlify.app/",
     github: "https://github.com/boby-front/kassa.git",
@@ -60,7 +65,7 @@ const Data = [
     logo: [html, css, react, js, node],
   },
   {
-    image: image,
+    image: events,
     title: "724events",
     link: "https://77events.netlify.app/",
     github: "https://github.com/boby-front/724events.git",
@@ -72,7 +77,7 @@ const Data = [
     logo: [html, css, js, react, jest],
   },
   {
-    image: image,
+    image: plats,
     title: "Les petits plats ",
     link: "https://mes-petits-plats.netlify.app/",
     github: "https://github.com/boby-front/Les-petits-plats.git",
@@ -84,7 +89,7 @@ const Data = [
     logo: [react, javascript, html, css],
   },
   {
-    image: image,
+    image: argent,
     title: "Argent Bank",
     github: "https://github.com/boby-front/Argent-Bank.git",
     description:
@@ -92,19 +97,31 @@ const Data = [
 
     pointFort:
       " • Développement complet de l'application web en utilisant React et Redux\n • Intégration du code HTML statique et du CSS pour créer une interface responsive\n • Gestion de l'état global de l'application avec Redux\n • Utilisation des meilleures pratiques de Green Code, optimisation des images et création de composants réutilisables\n • Collaboration avec l'équipe back-end pour s'assurer de la préparation des routes API\n • Préparation d'un document Swagger décrivant les routes API pour les transactions dans la phase 2 du projet",
-    logo: [react, redux, javascript, html, css, mongo],
+    logo: [react, redux, javascript, html, css, mongo, swagger],
   },
   {
-    image: image,
+    image: ecommerce,
     title: "E-commerce",
-    link: "Lien vers l'application de panier",
-    github: "Lien vers le référentiel GitHub",
+    link: "https://e-commerce-by-me.netlify.app/",
+    github: "https://github.com/boby-front/E-commerce.git",
     description:
       "Ce projet consiste à développer un système de panier d'achats interactif en utilisant React.js et Redux Toolkit. L'application permet aux utilisateurs d'ajouter des articles à leur panier, de gérer les quantités et de supprimer des articles du panier. L'état global du panier est géré efficacement avec Redux Toolkit, garantissant une expérience utilisateur fluide. Le total des achats et le nombre d'articles dans le panier sont automatiquement mis à jour à mesure que les utilisateurs effectuent des actions. Ce projet est conçu pour offrir une expérience de magasinage conviviale et intuitive.",
 
     pointFort:
-      " • Développement d'un système de panier d'achats interactif avec React.js\n • Utilisation de Redux Toolkit pour gérer l'état global du panier\n • Ajout, gestion des quantités et suppression d'articles du panier\n • Mise à jour automatique du total et du nombre d'articles dans le panier\n • Interface utilisateur conviviale et réactive\n • Possibilité d'explorer le code source sur GitHub",
-    logo: [react, redux, javascript, html, css],
+      " • Développement d'un système de panier d'achats interactif avec React.js\n • Utilisation de Redux Toolkit pour gérer l'état global du panier\n • Ajout, gestion des quantités et suppression d'articles du panier\n • Mise à jour automatique du total et du nombre d'articles dans le panier\n • Interface utilisateur conviviale et reactive",
+    logo: [react, redux, javascript, html, css, tailwind],
+  },
+  {
+    image: geodata,
+    title: "Explorateur de Pays",
+    link: "https://geo-data-by-me.netlify.app/",
+    github: "https://github.com/boby-front/Geo-Data.git",
+    description:
+      "Ce projet consiste à créer un explorateur de pays interactif en utilisant React.js et Axios pour récupérer des données depuis une API de pays. Les données des pays, y compris les informations de base et les drapeaux, sont affichées de manière conviviale. Les utilisateurs peuvent filtrer les pays par divers critères et obtenir des détails complets sur chaque pays en utilisant des modales. De plus, les modales permettent la mise à jour des informations des pays et la modification de leurs drapeaux. Ce projet offre une expérience d'apprentissage riche sur la géographie mondiale.",
+
+    pointFort:
+      " • Récupération de données depuis une API de pays avec Axios\n • Affichage des informations de base et des drapeaux de chaque pays\n • Filtrage des pays par critères variés\n • Modales interactives pour l'affichage détaillé des pays et la mise à jour des informations\n • Possibilité de personnaliser les drapeaux des pays\n • Interface utilisateur conviviale et réactive\n • Possibilité d'explorer le code source sur GitHub",
+    logo: [react, javascript, html, css, tailwind],
   },
 ];
 
