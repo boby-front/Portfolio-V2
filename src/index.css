@@ -769,3 +769,8 @@ header nav ul li:hover::after {
   right: -180px;
   position: absolute;
 }
+
+.form-contacts input,
+.form-contacts textarea {
+  color: black;
+}

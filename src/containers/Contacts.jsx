@@ -6,7 +6,13 @@ const Contacts = () => {
       <h1>
         <span className="number-title">04.</span> CONTACTEZ MOI
       </h1>
-      <form name="contact" method="post" data-netlify="true" onSubmit="submit">
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        onSubmit="submit"
+        className="form-contacts"
+      >
         <input type="hidden" name="form-name" value="contact" />
         <label for="name">Nom :</label>
         <input type="text" name="name" />
