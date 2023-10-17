@@ -103,12 +103,12 @@ const Acceuil = () => {
 
         <h1 ref={targetTitleReff} className="target-title-second"></h1>
         <p className="text-acceuil">
-          Moi c'est Bob, un passionné de développement et de graphisme,
+          👋 Moi c'est Bob, un passionné de développement et de graphisme,
           spécialisé en React et Node.Js. Mon objectif est de créer des
           interfaces web interactives et esthétiques en utilisant les dernières
           technologies. Je suis constamment à l'affût des tendances et des
-          meilleures pratiques pour vous offrir une expérience utilisateur
-          exceptionnelle.
+          meilleures pratiques pour vous offrir la meilleur expérience
+          utilisateur !
         </p>
         <p id="text-code">+ 1200h de code 🚀</p>
       </article>

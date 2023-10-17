@@ -55,7 +55,7 @@ header {
 
 .portfolio {
   letter-spacing: 3px;
-  transition: all 0.3s ease;
+  transition: all 0s ease;
 }
 
 .portfolio:hover {
@@ -65,6 +65,7 @@ header {
 
 .hide {
   top: -90px;
+  opacity: 0;
 }
 
 header nav {
@@ -407,6 +408,7 @@ header nav ul li:hover::after {
 
 .main-competences h1 {
   margin: auto;
+  margin-top: 50px;
   position: relative;
   width: 500px;
   text-align: center;
@@ -647,7 +649,7 @@ header nav ul li:hover::after {
 
 .modal-content {
   position: relative;
-  width: 50%;
+  width: 55%;
   min-height: 500px;
   background-color: #f6f6f6;
   border-radius: 10px;
@@ -677,7 +679,7 @@ header nav ul li:hover::after {
 
 .modal-content p {
   color: rgb(41, 41, 41);
-  font-size: 22px;
+  font-size: 19px;
   margin-bottom: 40px;
   text-align: justify;
 }
@@ -698,4 +700,72 @@ header nav ul li:hover::after {
   width: 60px;
   margin-top: 50px;
   margin-right: 20px;
+}
+
+/** A PROPOS**/
+
+.main-apropos h1 {
+  margin: 100px auto;
+  position: relative;
+  width: 500px;
+  text-align: center;
+  font-size: 45px;
+}
+
+.main-apropos h1::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 200px;
+  background-color: #f6f6f6;
+  top: 50%;
+  right: -200px;
+  position: absolute;
+}
+
+.article-apropos {
+  display: flex;
+}
+
+.article-apropos section {
+  width: 65%;
+  padding-right: 50px;
+}
+
+.article-apropos section p {
+  font-size: 24px;
+  line-height: 35px;
+  text-align: justify;
+  margin-top: 20px;
+  font-weight: 200;
+}
+
+.image-apropos-container {
+  width: 40%;
+}
+
+.f-w-police {
+  font-weight: 800 !important;
+  font-size: 26px;
+}
+
+/** CONTACTS **/
+
+.main-contacts h1 {
+  margin: 100px auto;
+  position: relative;
+  width: 500px;
+  text-align: center;
+  font-size: 45px;
+}
+
+.main-contacts h1::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 200px;
+  background-color: #f6f6f6;
+  top: 50%;
+  right: -180px;
+  position: absolute;
 }
