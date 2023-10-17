@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contacts = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  console.log(name, email, message);
+
   return (
     <main className="main-contacts">
       <h1>
@@ -8,20 +14,36 @@ const Contacts = () => {
       </h1>
       <form
         name="contact"
-        method="post"
-        data-netlify="true"
+        method="POST"
         onSubmit="submit"
         className="form-contacts"
       >
         <input type="hidden" name="form-name" value="contact" />
         <label for="name">Nom :</label>
-        <input type="text" name="name" />
+        <input
+          id="name"
+          type="text"
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
 
         <label for="email">Email :</label>
-        <input type="email" name="email" />
+        <input
+          id="email"
+          type="email"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
         <label for="message">Message :</label>
-        <textarea name="message"></textarea>
+        <textarea
+          id="message"
+          name="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
 
         <button type="submit">Envoyer</button>
       </form>
