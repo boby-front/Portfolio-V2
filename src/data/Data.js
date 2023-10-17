@@ -113,14 +113,14 @@ const Data = [
   },
   {
     image: geodata,
-    title: "Explorateur de Pays",
+    title: "Explorer",
     link: "https://geo-data-by-me.netlify.app/",
     github: "https://github.com/boby-front/Geo-Data.git",
     description:
       "Ce projet consiste à créer un explorateur de pays interactif en utilisant React.js et Axios pour récupérer des données depuis une API de pays. Les données des pays, y compris les informations de base et les drapeaux, sont affichées de manière conviviale. Les utilisateurs peuvent filtrer les pays par divers critères et obtenir des détails complets sur chaque pays en utilisant des modales. De plus, les modales permettent la mise à jour des informations des pays et la modification de leurs drapeaux. Ce projet offre une expérience d'apprentissage riche sur la géographie mondiale.",
 
     pointFort:
-      " • Récupération de données depuis une API de pays avec Axios\n • Affichage des informations de base et des drapeaux de chaque pays\n • Filtrage des pays par critères variés\n • Modales interactives pour l'affichage détaillé des pays et la mise à jour des informations\n • Possibilité de personnaliser les drapeaux des pays\n • Interface utilisateur conviviale et réactive\n • Possibilité d'explorer le code source sur GitHub",
+      " • Récupération de données depuis une API de pays avec Axios\n • Affichage des informations de base et des drapeaux de chaque pays\n • Modales interactives pour l'affichage détaillé des pays et la mise à jour des informations\n  • Interface utilisateur conviviale et réactive",
     logo: [react, javascript, html, css, tailwind],
   },
 ];

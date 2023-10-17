@@ -29,7 +29,6 @@ const Competences = () => {
           <div className="competences-div">
             <CompetencesCard logoCompetence={html} titleCard={"HTML"} />
             <CompetencesCard logoCompetence={css} titleCard={"CSS"} />
-            <CompetencesCard logoCompetence={sass} titleCard={"SASS"} />
             <CompetencesCard logoCompetence={js} titleCard={"Javascript"} />
           </div>
         </section>
@@ -46,6 +45,7 @@ const Competences = () => {
               logoCompetence={tailwind}
               titleCard={"Tailwind CSS"}
             />
+            <CompetencesCard logoCompetence={sass} titleCard={"SASS"} />
           </div>
         </section>
 
@@ -71,6 +71,7 @@ const Competences = () => {
           <SkillCard skillTitle={"W3C"} />
           <SkillCard skillTitle={"Curiosité"} />
           <SkillCard skillTitle={"Bonne communication"} />
+          <SkillCard skillTitle={"Gestion du stress"} />
         </section>
       </article>
     </main>
