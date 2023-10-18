@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import saturn from "../assets/images/saturn.png";
 const Acceuil = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -94,6 +96,10 @@ const Acceuil = () => {
     };
   }, []);
 
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
   return (
     <main className="article-acceuil" id="acceuil">
       <article className=" div-titles">
@@ -110,10 +116,23 @@ const Acceuil = () => {
           meilleures pratiques pour vous offrir la meilleur expérience
           utilisateur !
         </p>
-        <p id="text-code">+ 1200h de code 🚀</p>
+        <motion.p
+          id="text-code"
+          ref={ref}
+          initial={{ y: 200, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.9, delay: 1.5 }}
+        >
+          + 1200h de code 🚀
+        </motion.p>
       </article>
 
-      <div className="cercle-1">
+      <motion.div
+        className="cercle-1"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.7, delay: 0.4 }}
+      >
         <div className="cercle-2">
           <div className="cercle-3">
             <div className="cercle-4">
@@ -121,7 +140,7 @@ const Acceuil = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div style={divStyle} id="planet" className="planet1"></div>
       <div style={divStyle} id="planet" className="planet2"></div>

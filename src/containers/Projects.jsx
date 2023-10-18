@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import ProjectCard from "../components/ProjectCard";
 import { Data } from "../data/Data";
 import ModalProject from "../components/ModalProject";
@@ -19,11 +21,21 @@ const Projects = () => {
     setModalValue(true);
   };
 
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
   return (
     <main className="projects-main">
-      <h1>
+      <motion.h1
+        ref={ref}
+        initial={{ x: -1200, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.8 }}
+        className="rightToLeft"
+      >
         <span className="number-title">02.</span> MES PROJETS
-      </h1>
+      </motion.h1>
       <article className="article-projects">
         {Data.map((el, index) => (
           <ProjectCard
@@ -33,7 +45,14 @@ const Projects = () => {
             urlSite={el.link}
             urlGithub={el.github}
             modaleView={() =>
-              openModal(el.description, el.title, el.pointFort, el.logo)
+              openModal(
+                el.description,
+                el.title,
+                el.pointFort,
+                el.logo,
+                el.github,
+                el.link
+              )
             }
           />
         ))}

@@ -1,11 +1,23 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Apropos = () => {
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
   return (
     <main className="main-apropos">
-      <h1>
+      <motion.h1
+        ref={ref}
+        initial={{ y: 200, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.8 }}
+        className="rightToLeft"
+      >
         <span className="number-title">03.</span> À PROPOS DE MOI
-      </h1>
+      </motion.h1>
       <article className="article-apropos">
         <div className="image-apropos-container">
           <p>

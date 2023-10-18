@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import CompetencesCard from "../components/CompetenceCard";
 import js from "../assets/logos/js.png";
 import html from "../assets/logos/html.png";
@@ -18,11 +20,21 @@ import vite from "../assets/logos/Vitejs.png";
 import SkillCard from "../components/SkillCard";
 
 const Competences = () => {
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
   return (
     <main className="main-competences">
-      <h1>
+      <motion.h1
+        ref={ref}
+        initial={{ x: 1200, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.8 }}
+        className="rightToLeft"
+      >
         <span className="number-title">01.</span> MES COMPÉTENCES
-      </h1>
+      </motion.h1>
       <article>
         <section className="competences-section">
           <h2>Languages</h2>
