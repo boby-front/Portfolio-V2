@@ -1,53 +1,29 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import ConstForm from "../components/ContactForm";
+import ContactMe from "../components/ContactMe";
 
 const Contacts = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  console.log(name, email, message);
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
 
   return (
-    <main className="main-contacts">
-      <h1>
-        <span className="number-title">04.</span> CONTACTEZ MOI
-      </h1>
-      <form
-        name="contact"
-        method="POST"
-        onSubmit="submit"
-        className="form-contacts"
+    <footer className="main-contacts">
+      <motion.h1
+        ref={ref}
+        initial={{ x: -100, y: -100, opacity: 0 }}
+        animate={inView ? { opacity: 1, x: 0, y: 0 } : {}}
+        transition={{ duration: 1.5, type: "spring", stiffness: 80 }}
       >
-        <input type="hidden" name="form-name" value="contact" />
-        <label for="name">Nom :</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-
-        <label for="email">Email :</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <label for="message">Message :</label>
-        <textarea
-          id="message"
-          name="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        ></textarea>
-
-        <button type="submit">Envoyer</button>
-      </form>
-    </main>
+        <span className="number-title">04.</span> CONTACTEZ MOI
+      </motion.h1>
+      <div className="contact-group">
+        <ContactMe />
+        <ConstForm />
+      </div>
+    </footer>
   );
 };
 

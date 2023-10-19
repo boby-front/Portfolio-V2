@@ -30,8 +30,7 @@ const Competences = () => {
         ref={ref}
         initial={{ x: 1200, opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
-        transition={{ duration: 0.8 }}
-        className="rightToLeft"
+        transition={{ duration: 0.8, type: "spring", stiffness: 80 }}
       >
         <span className="number-title">01.</span> MES COMPÉTENCES
       </motion.h1>

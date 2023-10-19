@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import github from "../assets/logos/github.png";
 import about from "../assets/logos/about.jpg";
 import link from "../assets/logos/link.png";
@@ -8,8 +10,17 @@ const ProjectCard = ({ titleProject, img, urlSite, urlGithub, modaleView }) => {
     e.stopPropagation();
   };
 
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
-    <div
+    <motion.div
+      ref={ref}
+      initial={{ scale: 0 }}
+      animate={inView ? { scale: 1 } : {}}
+      transition={{ duration: 0.5, ease: "linear" }}
       onClick={() => {
         modaleView(true);
       }}
@@ -37,7 +48,7 @@ const ProjectCard = ({ titleProject, img, urlSite, urlGithub, modaleView }) => {
           <img src={about} alt="" className="logo-card-project" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

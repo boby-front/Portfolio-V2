@@ -13,16 +13,13 @@ const Apropos = () => {
         ref={ref}
         initial={{ y: 200, opacity: 0 }}
         animate={inView ? { y: 0, opacity: 1 } : {}}
-        transition={{ duration: 0.8 }}
-        className="rightToLeft"
+        transition={{ duration: 0.8, type: "spring", stiffness: 80 }}
       >
         <span className="number-title">03.</span> À PROPOS DE MOI
       </motion.h1>
       <article className="article-apropos">
         <div className="image-apropos-container">
-          <p>
-            <p></p>
-          </p>
+          <p></p>
         </div>
         <section>
           <p>
@@ -43,7 +40,7 @@ const Apropos = () => {
             évolutives.
           </p>
           <p className="f-w-police">
-            Explorez mon portfolio pour découvrir mes projets et n'hésitez pas à
+            Explorez mon portfolio pour découvrir mes projets, n'hésitez pas à
             me contacter, je suis ouvert à toutes opportunités. 🚀
           </p>
         </section>

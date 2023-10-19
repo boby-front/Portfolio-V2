@@ -121,7 +121,12 @@ const Acceuil = () => {
           ref={ref}
           initial={{ y: 200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.9, delay: 1.5 }}
+          transition={{
+            duration: 1,
+            delay: 1.3,
+            type: "spring",
+            stiffness: 80,
+          }}
         >
           + 1200h de code 🚀
         </motion.p>
@@ -131,7 +136,10 @@ const Acceuil = () => {
         className="cercle-1"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.7, delay: 0.4 }}
+        transition={{
+          duration: 1.3,
+          delay: 0.4,
+        }}
       >
         <div className="cercle-2">
           <div className="cercle-3">
