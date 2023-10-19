@@ -29,7 +29,7 @@ const Projects = () => {
     <main className="projects-main">
       <motion.h1
         ref={ref}
-        initial={{ x: -1200, opacity: 0 }}
+        initial={{ x: -200, opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 0.8, type: "spring", stiffness: 80 }}
         className="rightToLeft"

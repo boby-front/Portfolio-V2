@@ -3,13 +3,17 @@ import Logo from "../components/Logo";
 import Nav from "../components/Nav";
 
 const Header = () => {
-  const [scrollMooved, setScrollMooved] = useState();
+  const [scrollMooved, setScrollMooved] = useState(false);
 
   const handleScroll = (event) => {
-    if (event.deltaY > 0) {
-      setScrollMooved(true);
-    } else {
+    if (window.innerWidth < 1000) {
       setScrollMooved(false);
+    } else {
+      if (event.deltaY > 0) {
+        setScrollMooved(true);
+      } else {
+        setScrollMooved(false);
+      }
     }
   };
 
@@ -18,6 +22,20 @@ const Header = () => {
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1000) {
+        setScrollMooved(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 

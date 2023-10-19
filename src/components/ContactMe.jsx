@@ -10,7 +10,7 @@ const ContactMe = () => {
   return (
     <motion.div
       ref={ref}
-      initial={{ x: 500, opacity: 0 }}
+      initial={{ x: 200, opacity: 0 }}
       animate={inView ? { x: 0, opacity: 1 } : {}}
       transition={{ type: "spring", stiffness: 70 }}
       className="contact-me"
@@ -19,7 +19,7 @@ const ContactMe = () => {
         <i class="fa-solid fa-phone"></i> <p>06.75.53.36.46</p>
       </div>
       <a href="mailto:adresse@example.com" className="info-contact">
-        <i class="fa-solid fa-envelope"></i> <p>delanglebob38@gmail.com</p>
+        <i class="fa-solid fa-envelope"></i> delanglebob38@gmail.com
       </a>
       <div className="info-contact">
         <a
