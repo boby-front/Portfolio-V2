@@ -113,7 +113,7 @@ const Acceuil = () => {
           spécialisé en React et Node.Js. Mon objectif est de créer des
           interfaces web interactives et esthétiques en utilisant les dernières
           technologies. Je suis constamment à l'affût des tendances et des
-          meilleures pratiques pour vous offrir la meilleur expérience
+          meilleures pratiques pour vous offrir la meilleure expérience
           utilisateur !
         </p>
         <motion.p
