@@ -485,6 +485,10 @@ header nav ul li a:hover {
   .infos-card-project h2 {
     font-size: 18px !important;
   }
+
+  .planet1 {
+    right: 20px !important;
+  }
 }
 
 /** STAR **/
