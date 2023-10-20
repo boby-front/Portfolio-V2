@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const ConstForm = () => {
   const [sendMessage, setSendMessage] = useState(false);
