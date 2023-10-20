@@ -448,9 +448,12 @@ header nav ul li a:hover {
     color: #f6f6f6;
   }
 
-  .target-title,
-  .target-title-second span {
+  .target-title {
     font-size: 49px;
+  }
+
+  .target-title-second span {
+    font-size: 58px !important;
   }
 
   .target-title,
