@@ -47,6 +47,7 @@ const ProjectCard = ({ titleProject, img, urlSite, urlGithub, modaleView }) => {
           )}
           <img src={about} alt="" className="logo-card-project" />
         </div>
+        <div className="link-github-container"></div>
       </div>
     </motion.div>
   );

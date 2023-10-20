@@ -101,7 +101,7 @@ const Acceuil = () => {
   });
 
   return (
-    <main className="article-acceuil" id="acceuil">
+    <main className="article-acceuil" id="accueil">
       <article className=" div-titles">
         <h1 className="target-title">
           <span>&#123;</span> Je suis <span>&#125;</span>

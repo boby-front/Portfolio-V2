@@ -3,6 +3,21 @@
   padding: 0;
   box-sizing: border-box;
   color: #f6f6f6;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  background-color: #061c37;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 #root {
@@ -113,10 +128,16 @@ header nav ul li {
   list-style: none;
   margin-left: 50px;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 25px;
   position: relative;
   cursor: pointer;
   transition: color 0.3s ease;
+  padding-bottom: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 header nav ul {
@@ -141,7 +162,7 @@ header nav ul li:hover::after {
   width: 100%;
 }
 
-header nav ul li:hover {
+header nav ul li a:hover {
   color: #db504a;
 }
 
@@ -196,8 +217,12 @@ header nav ul li:hover {
     text-align: center;
     padding: 10px 0;
     margin: 0 0 2px 0;
-    color: #db504a;
+
     background-color: #f6f6f6;
+  }
+
+  header nav ul li a {
+    color: #db504a;
   }
 
   .modal-content {
@@ -229,6 +254,11 @@ header nav ul li:hover {
   .modal-content img {
     width: 40px !important;
     margin-top: 20px !important;
+  }
+
+  .link-github-container {
+    top: -10px !important;
+    right: 50px !important;
   }
 }
 
@@ -691,6 +721,7 @@ header nav ul li:hover {
 
 .projects-main {
   width: 100%;
+  padding-top: 80px;
 }
 
 .projects-main h1 {
@@ -837,7 +868,7 @@ header nav ul li:hover {
 
 .modal-content {
   position: relative;
-  width: 55%;
+  width: 65%;
   min-height: 500px;
   background-color: #f6f6f6;
   border-radius: 10px;
@@ -845,6 +876,33 @@ header nav ul li:hover {
   border: 1px solid grey;
   font-family: "manrope";
   animation: modal-moove 0.5s ease;
+}
+
+.link-github-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 95px;
+  right: 40px;
+}
+
+.link-github-container h3 {
+  height: 30px;
+  margin: 0 !important;
+}
+
+.link-github-container img {
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.5s all ease;
+}
+
+.link-github-container img:hover {
+  transform: scale(1.2);
 }
 
 @keyframes modal-moove {
@@ -892,8 +950,12 @@ header nav ul li:hover {
 
 /** A PROPOS**/
 
+.main-apropos {
+  padding-top: 80px;
+}
+
 .main-apropos h1 {
-  margin: 100px auto;
+  margin: 0 auto 100px auto;
   position: relative;
   width: 500px;
   text-align: center;
@@ -940,7 +1002,7 @@ header nav ul li:hover {
 /** CONTACTS **/
 
 .main-contacts {
-  padding-bottom: 50px;
+  padding: 100px 0;
   width: 100%;
 }
 

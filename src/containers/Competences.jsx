@@ -25,7 +25,7 @@ const Competences = () => {
   });
 
   return (
-    <main className="main-competences">
+    <main className="main-competences" id="compétences">
       <motion.h1
         ref={ref}
         initial={{ x: 200, opacity: 0 }}

@@ -8,7 +8,7 @@ const Apropos = () => {
   });
 
   return (
-    <main className="main-apropos">
+    <main className="main-apropos" id="àpropos">
       <motion.h1
         ref={ref}
         initial={{ y: 200, opacity: 0 }}

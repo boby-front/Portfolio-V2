@@ -18,11 +18,21 @@ const Nav = () => {
           <span className="nav-line"></span>
           <span className="nav-line"></span>
         </div>
-        <li>accueil</li>
-        <li>à propos</li>
-        <li>compétences</li>
-        <li>projets</li>
-        <li>contacts</li>
+        <li>
+          <a href="#accueil">accueil</a>
+        </li>
+        <li>
+          <a href="#àpropos">à propos</a>
+        </li>
+        <li>
+          <a href="#compétences">compétences</a>
+        </li>
+        <li>
+          <a href="#projets">projets</a>
+        </li>
+        <li>
+          <a href="#contacts">contacts</a>
+        </li>
       </ul>
     </nav>
   );

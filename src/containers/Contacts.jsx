@@ -10,7 +10,7 @@ const Contacts = () => {
   });
 
   return (
-    <footer className="main-contacts">
+    <footer className="main-contacts" id="contacts">
       <motion.h1
         ref={ref}
         initial={{ x: -100, y: -100, opacity: 0 }}

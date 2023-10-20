@@ -1,6 +1,16 @@
 import React from "react";
+import github from "../assets/logos/github.png";
+import link from "../assets/logos/link.png";
 
-const ModalProject = ({ modalView, description, pointFort, title, logos }) => {
+const ModalProject = ({
+  modalView,
+  description,
+  pointFort,
+  title,
+  logos,
+  linkInfo,
+  githubInfo,
+}) => {
   const pointFortArray = pointFort.split("\n");
 
   return (
@@ -25,6 +35,19 @@ const ModalProject = ({ modalView, description, pointFort, title, logos }) => {
           {logos.map((logo, index) => (
             <img key={index} src={logo} alt="" />
           ))}
+        </div>
+        <div className="link-github-container">
+          <h3>Liens :</h3>
+          {linkInfo && (
+            <a target="_blank" href={linkInfo}>
+              <img src={link} alt="" className="link" />
+            </a>
+          )}
+          {githubInfo && (
+            <a target="_blank" href={githubInfo}>
+              <img src={github} alt="" />
+            </a>
+          )}
         </div>
       </div>
     </div>

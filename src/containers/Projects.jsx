@@ -12,12 +12,16 @@ const Projects = () => {
   const [selectedProjecTitle, setSelectedProjecTitle] = useState("");
   const [selectedProjectPointFort, setSelectedProjectPointFort] = useState("");
   const [selectedProjectLogos, setSelectedProjectPointLogos] = useState("");
+  const [selectedLink, setSelectedLink] = useState("");
+  const [selectedGithub, setSelectedGithub] = useState("");
 
-  const openModal = (description, title, pointFort, logos) => {
+  const openModal = (description, title, pointFort, logos, github, link) => {
     setSelectedProjecTitle(title);
     setSelectedProjectDescription(description);
     setSelectedProjectPointFort(pointFort);
     setSelectedProjectPointLogos(logos);
+    setSelectedLink(link);
+    setSelectedGithub(github);
     setModalValue(true);
   };
 
@@ -26,7 +30,7 @@ const Projects = () => {
   });
 
   return (
-    <main className="projects-main">
+    <main className="projects-main" id="projets">
       <motion.h1
         ref={ref}
         initial={{ x: -200, opacity: 0 }}
@@ -63,6 +67,8 @@ const Projects = () => {
             title={selectedProjecTitle}
             pointFort={selectedProjectPointFort}
             logos={selectedProjectLogos}
+            linkInfo={selectedLink}
+            githubInfo={selectedGithub}
           />
         )}
       </article>
