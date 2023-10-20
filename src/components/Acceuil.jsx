@@ -120,7 +120,7 @@ const Acceuil = () => {
           id="text-code"
           ref={ref}
           initial={{ y: 200, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          animate={inView ? { y: 0, opacity: 1 } : {}}
           transition={{
             duration: 1,
             delay: 1.3,
