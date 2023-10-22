@@ -6,7 +6,7 @@ import ContactMe from "../components/ContactMe";
 
 const Contacts = () => {
   const [ref, inView] = useInView({
-    threshold: 0,
+    threshold: 0.5,
   });
 
   return (
