@@ -14,7 +14,7 @@ import git from "../assets/logos/git.webp";
 import figma from "../assets/logos/figma.webp";
 import swagger from "../assets/logos/swagger.webp";
 import node from "../assets/logos/node.webp";
-import mongo from "../assets/logos/mongoDB.webp";
+import mongo from "../assets/logos/mongodb.webp";
 import npm from "../assets/logos/npm.webp";
 import vite from "../assets/logos/Vitejs.webp";
 import SkillCard from "../components/SkillCard";
