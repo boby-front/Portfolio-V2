@@ -7,7 +7,7 @@ import redux from "../assets/logos/redux.webp";
 import tailwind from "../assets/logos/tailwind.webp";
 import swagger from "../assets/logos/swagger.webp";
 import node from "../assets/logos/node.webp";
-import mongo from "../assets/logos/mongoDB.webp";
+import mongo from "../assets/logos/mongodb.webp";
 import jest from "../assets/logos/jest.webp";
 import javascript from "../assets/logos/js.webp";
 import ohmmyfood from "../assets/images/ohmyfood.webp";
