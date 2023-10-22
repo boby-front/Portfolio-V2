@@ -1,6 +1,6 @@
 import React from "react";
-import github from "../assets/logos/github.png";
-import link from "../assets/logos/link.png";
+import github from "../assets/logos/github.webp";
+import link from "../assets/logos/link.webp";
 
 const ModalProject = ({
   modalView,

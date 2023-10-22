@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import github from "../assets/logos/github.png";
-import about from "../assets/logos/about.jpg";
-import link from "../assets/logos/link.png";
+import github from "../assets/logos/github.webp";
+import about from "../assets/logos/about.webp";
+import link from "../assets/logos/link.webp";
 
 const ProjectCard = ({ titleProject, img, urlSite, urlGithub, modaleView }) => {
   const stopPropagation = (e) => {

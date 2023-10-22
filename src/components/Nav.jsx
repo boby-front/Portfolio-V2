@@ -19,19 +19,29 @@ const Nav = () => {
           <span className="nav-line"></span>
         </div>
         <li>
-          <a href="#accueil">accueil</a>
+          <a href="#accueil" onClick={handleToggleMenu}>
+            accueil
+          </a>
         </li>
         <li>
-          <a href="#àpropos">à propos</a>
+          <a href="#àpropos" onClick={handleToggleMenu}>
+            à propos
+          </a>
         </li>
         <li>
-          <a href="#compétences">compétences</a>
+          <a href="#compétences" onClick={handleToggleMenu}>
+            compétences
+          </a>
         </li>
         <li>
-          <a href="#projets">projets</a>
+          <a href="#projets" onClick={handleToggleMenu}>
+            projets
+          </a>
         </li>
         <li>
-          <a href="#contacts">contacts</a>
+          <a href="#contacts" onClick={handleToggleMenu}>
+            contacts
+          </a>
         </li>
       </ul>
     </nav>
