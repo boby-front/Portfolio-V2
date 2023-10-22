@@ -226,16 +226,14 @@ header nav ul li a:hover {
   }
 
   .modal-content {
-    width: 100vw !important;
-    min-height: 100% !important;
+    width: 100% !important;
+    height: 100%;
     padding: 10px !important ;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     border-radius: 0 !important;
-    position: absolute;
-    top: 0;
-    left: 0;
+    overflow: auto;
   }
 
   .modal-content p {
@@ -252,11 +250,11 @@ header nav ul li a:hover {
 
   .modal-content img {
     width: 40px !important;
-    margin-top: 20px !important;
+    height: 40px !important;
   }
 
   .link-github-container {
-    top: -10px !important;
+    top: 20px !important;
     right: 50px !important;
   }
 
@@ -264,8 +262,22 @@ header nav ul li a:hover {
     display: none;
   }
 
+  .link-github-container img {
+    padding: 5px !important;
+  }
+
   p.close-modal {
     font-size: 30px !important;
+  }
+
+  *::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #b9b9b9;
+    border-radius: 6px;
   }
 }
 
