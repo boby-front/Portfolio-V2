@@ -21,7 +21,7 @@ import SkillCard from "../components/SkillCard";
 
 const Competences = () => {
   const [ref, inView] = useInView({
-    threshold: 0,
+    threshold: 1,
   });
 
   return (

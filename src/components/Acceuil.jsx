@@ -128,7 +128,7 @@ const Acceuil = () => {
             stiffness: 80,
           }}
         >
-          + 1200h de code 🚀
+          + 1400h de code 🚀
         </motion.p>
       </article>
 
