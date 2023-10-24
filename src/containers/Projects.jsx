@@ -26,7 +26,7 @@ const Projects = () => {
   };
 
   const [ref, inView] = useInView({
-    threshold: 1,
+    threshold: 0.2,
   });
 
   return (
