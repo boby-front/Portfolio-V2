@@ -104,7 +104,6 @@ header nav ul li {
   position: relative;
   cursor: pointer;
   transition: color 0.3s;
-  padding-bottom: 20px;
 }
 header nav ul li a {
   text-decoration: none;
@@ -232,7 +231,7 @@ header nav ul li a:hover {
   background-color: #10253e;
   z-index: -4;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .toggle-btn {
     display: block;
     left: 130px;

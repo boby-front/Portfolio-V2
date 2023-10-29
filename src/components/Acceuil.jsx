@@ -9,10 +9,6 @@ const Acceuil = () => {
     const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
 
-      // Calcul du déplacement par rapport à la position précédente
-      const deltaX = clientX - position.x;
-      const deltaY = clientY - position.y;
-
       // Limiter le déplacement à 50 pixels
       const newX = Math.min(
         position.x + 50,
@@ -123,7 +119,7 @@ const Acceuil = () => {
           animate={inView ? { y: 0, opacity: 1 } : {}}
           transition={{
             duration: 1,
-            delay: 1.3,
+            delay: 0.4,
             type: "spring",
             stiffness: 80,
           }}

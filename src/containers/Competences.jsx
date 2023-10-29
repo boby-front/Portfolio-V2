@@ -18,6 +18,7 @@ import mongo from "../assets/logos/mongodb.webp";
 import npm from "../assets/logos/npm.webp";
 import vite from "../assets/logos/Vitejs.webp";
 import SkillCard from "../components/SkillCard";
+import ts from "../assets/logos/typescript.png";
 
 const Competences = () => {
   const [ref, inView] = useInView({
@@ -41,6 +42,7 @@ const Competences = () => {
             <CompetencesCard logoCompetence={html} titleCard={"HTML"} />
             <CompetencesCard logoCompetence={css} titleCard={"CSS"} />
             <CompetencesCard logoCompetence={js} titleCard={"Javascript"} />
+            <CompetencesCard logoCompetence={ts} titleCard={"Typescript"} />
           </div>
         </section>
 
