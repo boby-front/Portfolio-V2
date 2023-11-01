@@ -4,8 +4,11 @@ import { useInView } from "react-intersection-observer";
 import ProjectCard from "../components/ProjectCard";
 import { Data } from "../data/Data";
 import ModalProject from "../components/ModalProject";
+import { useSelector } from "react-redux";
 
 const Projects = () => {
+  const { mode } = useSelector((state) => state.sunMode);
+
   const [modalValue, setModalValue] = useState(false);
   const [selectedProjectDescription, setSelectedProjectDescription] =
     useState("");
@@ -30,13 +33,16 @@ const Projects = () => {
   });
 
   return (
-    <main className="projects-main" id="projets">
+    <main
+      className={`projects-main bg-dark ${!mode ? "sun-theme-bg" : ""}`}
+      id="projets"
+    >
       <motion.h1
         ref={ref}
         initial={{ x: -200, opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 0.8, type: "spring", stiffness: 80 }}
-        className="rightToLeft"
+        className={!mode ? "sun-theme-text" : ""}
       >
         <span className="number-title">02.</span> MES PROJETS
       </motion.h1>

@@ -19,15 +19,21 @@ import npm from "../assets/logos/npm.webp";
 import vite from "../assets/logos/Vitejs.webp";
 import SkillCard from "../components/SkillCard";
 import ts from "../assets/logos/typescript.png";
+import { useSelector } from "react-redux";
 
 const Competences = () => {
+  const { mode } = useSelector((state) => state.sunMode);
   const [ref, inView] = useInView({
     threshold: 0,
   });
 
   return (
-    <main className="main-competences" id="compétences">
+    <main
+      className={`main-competences bg-dark ${!mode ? "sun-theme-bg" : ""}`}
+      id="compétences"
+    >
       <motion.h1
+        className={!mode ? "sun-theme-text" : ""}
         ref={ref}
         initial={{ x: 200, opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
@@ -37,7 +43,7 @@ const Competences = () => {
       </motion.h1>
       <article>
         <section className="competences-section">
-          <h2>Languages</h2>
+          <h2 className={!mode ? "sun-theme-text" : ""}>Languages</h2>
           <div className="competences-div">
             <CompetencesCard logoCompetence={html} titleCard={"HTML"} />
             <CompetencesCard logoCompetence={css} titleCard={"CSS"} />
@@ -47,7 +53,7 @@ const Competences = () => {
         </section>
 
         <section className="competences-section">
-          <h2>Frameworks</h2>
+          <h2 className={!mode ? "sun-theme-text" : ""}>Frameworks</h2>
           <div className="competences-div">
             <CompetencesCard logoCompetence={react} titleCard={"React.js"} />
             <CompetencesCard
@@ -63,7 +69,9 @@ const Competences = () => {
         </section>
 
         <section className="competences-section">
-          <h2>Outils de gestion et environement</h2>
+          <h2 className={!mode ? "sun-theme-text" : ""}>
+            Outils de gestion et environement
+          </h2>
           <div className="competences-div">
             <CompetencesCard logoCompetence={vscode} titleCard={"VS Code"} />
             <CompetencesCard logoCompetence={git} titleCard={"Git"} />

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../components/Logo";
 import Nav from "../components/Nav";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const { mode } = useSelector((state) => state.sunMode);
   const [scrollMooved, setScrollMooved] = useState(false);
 
   const handleScroll = (event) => {
@@ -40,7 +42,11 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={scrollMooved ? "hide" : ""}>
+    <header
+      className={`${scrollMooved ? "hide" : ""} ${
+        !mode ? "sun-theme-bg-header" : ""
+      }`}
+    >
       <Logo />
       <Nav />
     </header>

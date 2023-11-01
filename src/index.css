@@ -17,6 +17,42 @@ header {
   width: 12px;
   background-color: #061c37;
 }
+
+.bg-dark {
+  background-color: #061c37;
+}
+
+.sun-theme-bg-header {
+  background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0) 0, #f6f6f6 48%);
+  background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0) 0, #f6f6f6 48%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0, #f6f6f6 48%);
+}
+
+.sun-theme-bg {
+  background-color: #f6f6f6 !important;
+}
+
+.sun-theme-bg-button {
+  background-color: rgb(223, 220, 220) !important;
+  border: rgb(187, 187, 187) solid 1px !important;
+}
+
+.sun-theme-border {
+  border: solid #292929 !important;
+}
+
+.sun-theme-text {
+  color: #292929 !important;
+}
+
+.sun-theme-text::after {
+  background: #292929 !important;
+}
+
+.sun-theme-opacity {
+  transition: color 0.3s ease;
+}
+
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 6px;
@@ -26,7 +62,6 @@ header {
 }
 #root {
   margin: auto;
-  background-color: #061c37;
   font-family: "nunito sans", sans-serif;
   position: relative;
   overflow: hidden;
@@ -47,11 +82,50 @@ header {
   transition: 1s;
   font-family: Manrope, sans-serif;
   z-index: 150;
-  background: #000;
   background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0) 0, #061c37 48%);
   background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0) 0, #061c37 48%);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0, #061c37 48%);
 }
+.link-portfolio .logo-github {
+  height: 70px;
+}
+
+.sun-mode-button {
+  background-color: transparent;
+  border: none;
+  margin-left: 20px;
+  padding: 3px;
+  box-sizing: content-box;
+  background-color: rgba(255, 255, 255, 0.137);
+  border: 1px solid rgb(97, 96, 96);
+  border-radius: 20px;
+  height: 37px;
+  width: 80px;
+  display: flex;
+}
+
+.move-button {
+  justify-content: flex-end;
+}
+
+.container-logo-theme {
+  transition: all 1s ease;
+}
+
+.sun-mode-button i {
+  font-size: 25px;
+  transition: 0.4s all ease;
+  height: 37px;
+  width: 37px;
+  border-radius: 60%;
+  background-color: #cb3434;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .portfolio {
   letter-spacing: 3px;
   transition: 0.4s;
@@ -612,7 +686,8 @@ header nav ul li a:hover {
   flex-wrap: wrap;
   justify-content: center;
   width: 75%;
-  margin: 140px auto;
+  margin: auto;
+  padding-bottom: 80px;
 }
 .logo-card-project {
   height: 35px;

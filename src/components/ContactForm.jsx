@@ -1,8 +1,11 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { useSelector } from "react-redux";
 
 const ConstForm = () => {
+  const { mode } = useSelector((state) => state.sunMode);
+
   const [sendMessage, setSendMessage] = useState(false);
   const [messageText, setMessageText] = useState("");
   const form = useRef();
@@ -44,18 +47,41 @@ const ConstForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className="form-contacts">
-      <label>Nom :</label>
-      <input type="text" name="name" required autoComplete="off" id="name" />
-      <label className="email">Email :</label>
-      <input type="email" name="email" required autoComplete="off" id="email" />
-      <label className="message">Message :</label>
-      <textarea name="message" id="message" />
+    <form
+      ref={form}
+      onSubmit={sendEmail}
+      className={`form-contacts ${!mode ? "sun-theme-border" : ""}`}
+    >
+      <label className={!mode ? "sun-theme-text" : ""}>Nom :</label>
+      <input
+        type="text"
+        name="name"
+        required
+        autoComplete="off"
+        id="name"
+        className={!mode ? "sun-theme-text" : ""}
+      />
+      <label className={!mode ? "sun-theme-text" : ""}>Email :</label>
+      <input
+        type="email"
+        name="email"
+        required
+        autoComplete="off"
+        id="email"
+        className={!mode ? "sun-theme-text" : ""}
+      />
+      <label className={!mode ? "sun-theme-text" : ""}>Message :</label>
+      <textarea
+        name="message"
+        id="message"
+        className={!mode ? "sun-theme-text" : ""}
+      />
       <motion.button
         transition={{ type: "spring" }}
         whileHover={{ scale: 1.2 }}
         type="submit"
         id="send"
+        className={!mode ? "sun-theme-text" : ""}
       >
         Envoyer
       </motion.button>

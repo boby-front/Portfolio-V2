@@ -2,8 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import saturn from "../assets/images/saturn.png";
+import { useSelector } from "react-redux";
+
 const Acceuil = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const { mode } = useSelector((state) => state.sunMode);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -97,14 +100,17 @@ const Acceuil = () => {
   });
 
   return (
-    <main className="article-acceuil" id="accueil">
+    <main
+      className={`article-acceuil bg-dark ${!mode ? "sun-theme-bg" : ""}`}
+      id="accueil"
+    >
       <article className=" div-titles">
-        <h1 className="target-title">
+        <h1 className={`target-title ${!mode ? "sun-theme-text" : ""}`}>
           <span>&#123;</span> Je suis <span>&#125;</span>
         </h1>
 
         <h1 ref={targetTitleReff} className="target-title-second"></h1>
-        <p className="text-acceuil">
+        <p className={`text-acceuil ${!mode ? "sun-theme-text" : ""}`}>
           👋 Moi c'est Bob, un passionné de développement et de graphisme,
           spécialisé en React et Node.Js. Mon objectif est de créer des
           interfaces web interactives et esthétiques en utilisant les dernières
@@ -114,6 +120,7 @@ const Acceuil = () => {
         </p>
         <motion.p
           id="text-code"
+          className={!mode ? "sun-theme-text" : ""}
           ref={ref}
           initial={{ y: 200, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : {}}
