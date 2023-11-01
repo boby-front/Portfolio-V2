@@ -136,7 +136,7 @@ const Acceuil = () => {
       </article>
 
       <motion.div
-        className="cercle-1"
+        className={`cercle-1 ${!mode ? "sun-theme-c1-bg" : ""}`}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{
@@ -144,9 +144,9 @@ const Acceuil = () => {
           delay: 0.4,
         }}
       >
-        <div className="cercle-2">
-          <div className="cercle-3">
-            <div className="cercle-4">
+        <div className={`cercle-2 ${!mode ? "sun-theme-c2-bg" : ""}`}>
+          <div className={`cercle-3 ${!mode ? "sun-theme-c3-bg" : ""}`}>
+            <div className={`cercle-4 ${!mode ? "sun-theme-c4-bg" : ""}`}>
               <img src={saturn} alt="" className="cosmonaute" />
             </div>
           </div>

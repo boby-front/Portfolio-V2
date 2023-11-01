@@ -8,7 +8,7 @@ const Header = () => {
   const [scrollMooved, setScrollMooved] = useState(false);
 
   const handleScroll = (event) => {
-    if (window.innerWidth < 1000) {
+    if (window.innerWidth < 1300) {
       setScrollMooved(false);
     } else {
       if (event.deltaY > 0) {
@@ -29,7 +29,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 1000) {
+      if (window.innerWidth < 1300) {
         setScrollMooved(false);
       }
     };
