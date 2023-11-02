@@ -337,6 +337,10 @@ header nav ul li a:hover {
     transform: translateX(100%);
   }
 
+  .sun-theme-bg-header {
+    background: transparent;
+  }
+
   #diamond,
   .link-github-container h3,
   .modal-content .planet-modal,
@@ -1056,6 +1060,7 @@ header nav ul li a:hover {
   .competences-div {
     width: 100%;
   }
+
   .contact-group {
     flex-direction: column-reverse;
   }
