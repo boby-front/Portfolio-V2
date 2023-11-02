@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const ContactMe = () => {
   const { mode } = useSelector((state) => state.sunMode);
   const [ref, inView] = useInView({
-    threshold: 1,
+    threshold: 0.2,
   });
 
   return (
