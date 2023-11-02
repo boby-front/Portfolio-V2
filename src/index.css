@@ -183,7 +183,7 @@ header nav {
   flex: 1;
   display: flex;
   justify-content: center;
-  transition: 0.5s all ease;
+  transition: 0.2s ease;
 }
 header nav ul li {
   list-style: none;
