@@ -81,7 +81,6 @@ const ConstForm = () => {
         whileHover={{ scale: 1.2 }}
         type="submit"
         id="send"
-        className={!mode ? "sun-theme-text" : ""}
       >
         Envoyer
       </motion.button>
