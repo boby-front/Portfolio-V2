@@ -10,16 +10,16 @@ const Nav = () => {
   };
 
   return (
-    <nav>
-      <ul className={!isMenuOpen ? "hide-nav" : ""}>
-        <div
-          className={`toggle-btn ${isMenuOpen ? "active" : ""}`}
-          onClick={handleToggleMenu}
-        >
-          <span className="nav-line"></span>
-          <span className="nav-line"></span>
-          <span className="nav-line"></span>
-        </div>
+    <nav className={!isMenuOpen ? "hide-nav" : ""}>
+      <div
+        className={`toggle-btn ${isMenuOpen ? "active" : ""}`}
+        onClick={handleToggleMenu}
+      >
+        <span className="nav-line"></span>
+        <span className="nav-line"></span>
+        <span className="nav-line"></span>
+      </div>
+      <ul>
         <li>
           <a
             href="#accueil"
