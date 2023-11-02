@@ -948,7 +948,7 @@ header nav ul li a:hover {
   margin-bottom: 40px;
 }
 .main-contacts h1 {
-  margin: 100px auto;
+  margin: 0 auto 100px auto;
   position: relative;
   width: 500px;
   text-align: center;
@@ -1049,9 +1049,12 @@ header nav ul li a:hover {
   margin-top: 30px;
 }
 @media (max-width: 1000px) {
-  .competences-div,
   .form-contacts {
     width: 90%;
+  }
+
+  .competences-div {
+    width: 100%;
   }
   .contact-group {
     flex-direction: column-reverse;
